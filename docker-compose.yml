@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    image: uygar00/selenium-aylik-rapor:latest
+    secrets:
+      - mail_email
+      - mail_pass
+      - txps_email
+      - txps_pass
+
+secrets:
+  mail_email:
+    file: secrets/mail_email.txt
+  mail_pass:
+    file: secrets/mail_pass.txt
+  txps_email:
+    file: secrets/txps_email.txt
+  txps_pass:
+    file: secrets/txps_pass.txt
