@@ -3,6 +3,7 @@ version: '3.8'
 services:
   app:
     image: uygar00/selenium-aylik-rapor:latest
+    restart: "no"
     secrets:
       - mail_email
       - mail_pass
@@ -11,10 +12,10 @@ services:
 
 secrets:
   mail_email:
-    file: secrets/mail_email.txt
+    external: true
   mail_pass:
-    file: secrets/mail_pass.txt
+    external: true
   txps_email:
-    file: secrets/txps_email.txt
+    external: true
   txps_pass:
-    file: secrets/txps_pass.txt
+    external: true
