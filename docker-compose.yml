@@ -3,7 +3,9 @@ version: '3.8'
 services:
   app:
     image: uygar00/selenium-aylik-rapor:latest
-    restart: "no"
+    deploy:
+      restart_policy:
+        condition: none
     secrets:
       - mail_email
       - mail_pass
